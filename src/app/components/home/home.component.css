@@ -1,0 +1,41 @@
+.wrapper {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(../../../assets/baseball-field.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+
+.mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mid h2 {
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.btn-accent {
+    border: 2px solid #34C0C1;
+    color: #fff;
+}
+
+.btn-accent:hover {
+    background-color: #34C0C1;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+}

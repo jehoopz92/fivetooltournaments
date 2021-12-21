@@ -1,0 +1,15 @@
+.top-bar {
+    width: 100%;
+    background: #34C0C1;
+    color: #333;
+    font-size: 14px;
+  }
+
+.left {
+    margin-right: 1rem;
+}
+
+.right {
+    margin-right: 2rem;
+}
+  
