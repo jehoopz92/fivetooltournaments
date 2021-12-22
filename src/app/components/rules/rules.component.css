@@ -6,3 +6,19 @@
 .wrapper h1 {
   color: var(--color-primary);
 }
+
+button {
+  background: url(../../../assets/grass.jpg);
+  background-size: cover;
+  color: white;
+  height: 100px;
+  font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--color-primary) !important;
+}
+
+.accordion-button::after {
+  display: none;
+}

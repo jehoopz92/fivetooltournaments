@@ -9,6 +9,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { RulesComponent } from './components/rules/rules.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RulesComponent } from './components/rules/rules.component';
     TopBarComponent,
     NavbarComponent,
     AboutusComponent,
-    RulesComponent
+    RulesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
