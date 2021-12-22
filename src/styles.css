@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Vars */
+:root {
+  --color-primary: #34c0c1;
+  --color-secondary: #343434;
+  --color-light: #f8f9fa;
+  --color-dark: #333;
+}
+/* Buttons */
+.butn {
+  padding: 5px;
+  color: var(--color-dark);
+  background-color: transparent;
+  border-radius: 10%;
+}
+.butn-primary-outline {
+  border: 2px solid var(--color-primary);
+  color: #fff;
+}
+
+.butn-primary-outline:hover {
+  background-color: var(--color-primary);
+  color: #333;
+  transition: all 0.5s ease-in-out;
+}

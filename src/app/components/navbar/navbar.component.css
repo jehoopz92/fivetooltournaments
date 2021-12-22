@@ -1,8 +1,9 @@
 img {
-    height: 70px;
-    width: 70px;
+  height: 70px;
+  width: 70px;
 }
 
 ul {
-    margin-right: 10rem;
+  margin-right: 10rem;
+  font-weight: bold;
 }
