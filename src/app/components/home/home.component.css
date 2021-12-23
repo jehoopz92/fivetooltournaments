@@ -80,13 +80,19 @@ nav {
   justify-content: space-evenly;
 }
 
-img {
-  height: 70px;
-  width: 70px;
-}
-
 ul {
   font-weight: bold;
+}
+
+img {
+  background-image: url('../../../assets/5TT-02.png');
+  display: block;
+  width: 70px;
+  height: 70px;
+  outline: none;
+  padding: 43px 51px 43px 51px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
