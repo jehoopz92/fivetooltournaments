@@ -5,6 +5,10 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /* Vars */
 :root {
   --color-primary: #34c0c1;
