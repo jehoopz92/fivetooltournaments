@@ -3,6 +3,12 @@
   background: var(--color-primary);
   color: var(--color-dark);
   font-size: 14px;
+  display: flex;
+  justify-content: end;
+}
+
+.fab {
+  margin-right: 1.5rem;
 }
 
 .left {

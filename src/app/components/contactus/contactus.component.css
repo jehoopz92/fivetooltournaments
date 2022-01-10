@@ -22,8 +22,8 @@
     color: #34c0c1;
 }
 
-.col {
-    height: 400px;
+.col-md-6 {
+    height: 300px;
 }
 
 .map {
