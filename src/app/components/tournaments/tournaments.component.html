@@ -1,7 +1,7 @@
 <div class="wrapper" id="tournaments">
   <div class="container">
     <h1 class="mb-3">Tournaments</h1>
-    <div class="row">
+    <div class="row" *ngIf="products">
       <div class="col-sm-6" *ngFor="let product of products">
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
@@ -14,8 +14,34 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
+                <h5 class="card-title">
+                  <strong>{{ product.name }}</strong>
+                </h5>
                 <p class="card-text">{{ product.description }}</p>
+                <p class="card-text" *ngIf="product.metadata.Dates">
+                  <strong>When:</strong>
+                  {{ product.metadata.Dates }}
+                </p>
+                <p class="card-text" *ngIf="product.metadata.Fields">
+                  <strong>Where:</strong>
+                  {{ product.metadata.Fields }}
+                </p>
+                <p class="card-text" *ngIf="product.metadata.Price">
+                  <strong>Price:</strong>
+                  {{ product.metadata.Price }}
+                </p>
+                <p class="card-text">
+                  <strong>
+                    ** Teams must email a full roster to
+                    <a
+                      class="email"
+                      href="mailto:fivetooltournaments@gmail.com"
+                    >
+                      fivetooltournaments@gmail.com
+                    </a>
+                    **
+                  </strong>
+                </p>
                 <p class="card-text">
                   <button class="butn butn-primary-outline">
                     <a href="{{ product.metadata.URL }}" target="_blank">
