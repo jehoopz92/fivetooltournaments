@@ -1,0 +1,12 @@
+.wrapper {
+    padding: 4rem;
+}
+
+h1 {
+    color: var(--color-primary);
+}
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+  }

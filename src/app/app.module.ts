@@ -1,16 +1,18 @@
 // Angular imports (Modules)
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppRoutingModule } from './app-routing.module'
+import { HttpClientModule } from '@angular/common/http'
 // Components
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { AboutusComponent } from './components/aboutus/aboutus.component';
-import { RulesComponent } from './components/rules/rules.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { ContactusComponent } from './components/contactus/contactus.component';
+import { AppComponent } from './app.component'
+import { HomeComponent } from './components/home/home.component'
+import { TopBarComponent } from './components/top-bar/top-bar.component'
+import { NavbarComponent } from './components/navbar/navbar.component'
+import { AboutusComponent } from './components/aboutus/aboutus.component'
+import { RulesComponent } from './components/rules/rules.component'
+import { FooterComponent } from './components/footer/footer.component'
+import { ContactusComponent } from './components/contactus/contactus.component'
+import { TournamentsComponent } from './components/tournaments/tournaments.component'
 
 @NgModule({
   declarations: [
@@ -21,13 +23,11 @@ import { ContactusComponent } from './components/contactus/contactus.component';
     AboutusComponent,
     RulesComponent,
     FooterComponent,
-    ContactusComponent
+    ContactusComponent,
+    TournamentsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
