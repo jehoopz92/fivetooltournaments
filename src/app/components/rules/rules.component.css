@@ -22,3 +22,7 @@ button {
 .accordion-button::after {
   display: none;
 }
+
+.primary-text:hover {
+  color: var(--color-light);
+}

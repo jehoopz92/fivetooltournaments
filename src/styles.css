@@ -37,3 +37,7 @@ html {
 .active {
   color: var(--color-primary) !important;
 }
+
+.primary-text {
+  color: var(--color-primary);
+}

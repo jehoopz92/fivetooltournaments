@@ -22,3 +22,7 @@ a {
     color: var(--color-primary);
     text-decoration: underline;
 }
+.email:hover {
+    color: var(--color-dark);
+    text-decoration: underline;
+}
