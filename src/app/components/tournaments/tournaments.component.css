@@ -26,3 +26,14 @@ a {
     color: var(--color-dark);
     text-decoration: underline;
 }
+
+.defaultImage {
+    background-image: url('../../../assets/5TT-02.png');
+    display: block;
+    width: 70px;
+    height: 70px;
+    outline: none;
+    padding: 43px 51px 43px 51px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
