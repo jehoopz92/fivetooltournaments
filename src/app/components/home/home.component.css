@@ -36,9 +36,30 @@
   margin-bottom: 3rem;
 }
 
+.wrapper p {
+  max-width: 900px;
+  margin-top: 1rem;
+}
+
+.ourName {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  border-radius: 20px;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.ourName span {
+  color: var(--color-light);
+}
+
 a {
   color: var(--color-light);
   text-decoration: none;
+}
+
+ul a {
+  margin: 0.5rem 0.3rem;
 }
 
 nav {
@@ -95,8 +116,19 @@ img {
   background-size: cover;
 }
 
+h1 span {
+  color: var(--color-primary);
+}
 @media only screen and (max-width: 600px) {
   .wrapper h1 {
     font-size: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .ourName {
+    width: 300px;
+    padding: 1rem;
   }
 }

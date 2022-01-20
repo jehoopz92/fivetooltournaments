@@ -1,8 +1,33 @@
 <div class="wrapper">
   <div class="overlay">
     <nav
-      class="navbar navbar-expand-lg animate__fadeInDown"
-      *ngIf="scrolled < 765 || scrolled === undefined"
+      class="navbar navbar-expand-lg"
+      *ngIf="scrolled < 765 && screenWidth > 800"
+    >
+      <div class="container">
+        <a href="#home"><img /></a>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tournaments">Tournaments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rules">Rules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactus">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav
+      class="navbar navbar-expand-lg"
+      *ngIf="screenWidth > 800 && scrolled === undefined"
     >
       <div class="container">
         <a href="#home"><img /></a>
@@ -26,7 +51,16 @@
       </div>
     </nav>
 
-    <h1>5 Tool Tournaments</h1>
+    <h1>
+      <span>5</span>-Tool Tournaments
+    </h1>
+
+    <div class="ourName">
+      <p>
+        <span>|</span>
+        Scouts have long graded position players on five tools that are central to success in the game: hitting, hitting for power, running, fielding and throwing. The so-called “five-tool player” is a special breed, as those who truly rate above average in each category are extremely rare.
+      </p>
+    </div>
 
     <button class="butn butn-primary-outline">
       <a href="#aboutus">About Us</a>
@@ -35,7 +69,7 @@
 
   <div
     class="navbar navbar-expand-sm navbar-light bg-light scrolled-nav"
-    *ngIf="scrolled > 765"
+    *ngIf="scrolled > 765 || screenWidth < 800"
   >
     <div class="container-fluid">
       <button
@@ -69,6 +103,22 @@
           <li class="nav-item">
             <a class="nav-link" href="#contactus">Contact Us</a>
           </li>
+
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <strong>
+              <i class="fab fa-facebook-f text-dark"></i>
+            </strong>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <strong>
+              <i class="fab fa-instagram text-dark"></i>
+            </strong>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <strong>
+              <i class="fab fa-twitter text-dark"></i>
+            </strong>
+          </a>
         </ul>
       </div>
     </div>

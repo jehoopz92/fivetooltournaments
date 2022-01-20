@@ -9,6 +9,7 @@ import { ProductsService } from '../../services/products.service'
 })
 export class TournamentsComponent implements OnInit {
   products: any
+  defaultImage = '~/assets/5TT-02.png'
 
   constructor(private productsService: ProductsService) {}
 

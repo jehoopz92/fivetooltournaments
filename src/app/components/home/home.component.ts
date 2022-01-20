@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core'
 })
 export class HomeComponent implements OnInit {
   scrolled: any
+  screenWidth: any;
 
   constructor() {}
 
   ngOnInit(): void {
+    this.screenWidth = window.innerWidth;
     window.addEventListener('scroll', () => {
       this.scrolled = window.pageYOffset
     })
