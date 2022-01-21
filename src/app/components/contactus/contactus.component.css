@@ -43,13 +43,14 @@ a {
     color: var(--color-light);
 }
 
-a:hover {
-    color: var(--color-primary);
-}
-
 img {
     float: left;
     margin-right: 1rem;
+}
+
+.butn {
+    width: 30%;
+    margin-top: 1rem;
 }
 
 @media only screen and (max-width: 600px) {

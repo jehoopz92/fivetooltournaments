@@ -106,14 +106,9 @@ ul {
 }
 
 img {
-  background-image: url('../../../assets/5TT-02.png');
-  display: block;
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   outline: none;
-  padding: 43px 51px 43px 51px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 h1 span {

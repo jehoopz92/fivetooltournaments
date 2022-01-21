@@ -10,19 +10,21 @@
                 *ngIf="product.images[0]"
                 src="{{ product.images[0] }}"
                 class="img-fluid rounded-start"
-                alt="..."
+                alt="Tounament Logo"
               />
               <img
                 *ngIf="!product.images[0]"
-                class="img-fluid rounded-start defaultImage"
+                class="img-fluid rounded-start"
+                src="assets/5TT-02.png"
+                alt="Our Logo"
               />
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">
+                <h5 class="card-title" *ngIf="product.name">
                   <strong>{{ product.name }}</strong>
                 </h5>
-                <p class="card-text">{{ product.description }}</p>
+                <p class="card-text" *ngIf="product.description">{{ product.description }}</p>
                 <p class="card-text" *ngIf="product.metadata.Dates">
                   <strong>When:</strong>
                   {{ product.metadata.Dates }}
@@ -47,7 +49,7 @@
                     **
                   </strong>
                 </p>
-                <p class="card-text">
+                <p class="card-text" *ngIf="product.metadata.URL">
                   <button class="butn butn-primary-outline">
                     <a href="{{ product.metadata.URL }}" target="_blank">
                       Pay Now
