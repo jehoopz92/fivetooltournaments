@@ -20,7 +20,6 @@ export class TournamentsComponent implements OnInit {
   loadProducts() {
     this.productsService.getProducts().subscribe((res: any) => {
       this.products = res.data
-      console.log(this.products)
     })
   }
 }
