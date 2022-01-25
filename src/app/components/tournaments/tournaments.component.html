@@ -2,7 +2,8 @@
   <div class="container">
     <h1 class="mb-3">Tournaments</h1>
     <div class="row" *ngIf="products">
-      <div class="col-sm-6" *ngFor="let product of products">
+      <ng-container *ngFor="let product of products">
+      <div class="col-sm-6" *ngIf="product.metadata.DisplayOnWebsite === 'true'">
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
@@ -33,6 +34,10 @@
                   <strong>Where:</strong>
                   {{ product.metadata.Fields }}
                 </p>
+                <p class="card-text" *ngIf="product.metadata.AgeGroup">
+                  <strong>Age Group:</strong>
+                  {{ product.metadata.AgeGroup }}
+                </p>
                 <p class="card-text" *ngIf="product.metadata.Price">
                   <strong>Price:</strong>
                   {{ product.metadata.Price }}
@@ -61,6 +66,7 @@
           </div>
         </div>
       </div>
+    </ng-container>
     </div>
   </div>
 </div>
