@@ -1,5 +1,10 @@
+User-agent: Googlebot
+allow: /
+Sitemap: https://fivetooltournaments.com/sitemap.xml
+
 User-agent: Google
-Disallow:
+allow: /
+Sitemap: https://fivetooltournaments.com/sitemap.xml
 
 User-agent: *
 Disallow: /
