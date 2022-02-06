@@ -1,0 +1,95 @@
+<div class="wrapper" id="tournaments">
+  <div class="container">
+    <h1 class="mb-3">Tournaments</h1>
+    <div class="row" *ngIf="products">
+      <ng-container *ngFor="let product of products">
+        <div
+          class="col-sm-6"
+          *ngIf="product.metadata.DisplayOnWebsite === 'true'"
+        >
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  *ngIf="product.images[0]"
+                  src="{{ product.images[0] }}"
+                  class="img-fluid rounded-start"
+                  alt="Tounament Logo"
+                />
+                <img
+                  *ngIf="!product.images[0]"
+                  class="img-fluid rounded-start"
+                  src="assets/5TT-02.webp"
+                  alt="Our Logo"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" *ngIf="product.name">
+                    <strong>{{ product.name }}</strong>
+                  </h5>
+                  <p class="card-text" *ngIf="product.description">
+                    {{ product.description }}
+                  </p>
+                  <p class="card-text" *ngIf="product.metadata.Price">
+                    <strong>Price:</strong>
+                    {{ product.metadata.Price }}
+                  </p>
+                  <div class="card-text">
+                    <div class="qty">
+                      <div class="input-group">
+                        <span
+                          class="input-group-text bg-danger"
+                          (click)="order.qty = order.qty - 1"
+                          data-type="minus"
+                        >
+                          -
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          [(ngModel)]="order.qty"
+                          name="qty"
+                        />
+                        <span
+                          class="input-group-text bg-success"
+                          (click)="order.qty = order.qty + 1"
+                          data-type="plus"
+                        >
+                          +
+                        </span>
+                      </div>
+                    </div>
+                    <div class="sizing">
+                      <select
+                        class="form-select form-select-sm"
+                        aria-label=".form-select-sm example"
+                        [(ngModel)]="order.size"
+                        name="size"
+                      >
+                        <option selected>Select size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p class="card-text" *ngIf="product.metadata.URL">
+                    <button
+                      class="butn butn-primary-outline"
+                      (click)="addToCart()"
+                    >
+                      Add to cart
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
