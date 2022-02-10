@@ -18,16 +18,18 @@ export class ApparelComponent implements OnInit {
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
-    this.loadProducts()
+    // this.loadProducts()
   }
 
-  loadProducts() {
-    this.productsService.getProducts().subscribe((res: any) => {
-      this.products = res.data
-    })
-  }
+  // loadProducts() {
+  //   this.productsService.getProducts().subscribe((res: any) => {
+  //     this.products = res.data
+  //   })
+  // }
 
-  addToCart() {
-    console.log(this.order)
-  }
+  // addToCart() {
+  //   this.productsService.createOrder(this.order).subscribe((res: any) => {
+  //     console.log(res)
+  //   })
+  // }
 }

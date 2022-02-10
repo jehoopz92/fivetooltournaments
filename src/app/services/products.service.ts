@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core'
 import { environment } from '../../environments/environment'
-import { HttpClient, HttpResponse } from '@angular/common/http'
-import { Stripe } from 'stripe'
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +18,11 @@ export class ProductsService {
   }
 
   getProducts() {
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: this.apiKey,
+    })
+    let options = { headers: headers }
     return this.http.get(this.baseURL + 'v1/products', {
       headers: {
         Authorization: `Bearer ${this.apiKey}`,
@@ -26,26 +30,23 @@ export class ProductsService {
     })
   }
 
-  async createCheckout(order: any) {
-    const stripe = new Stripe(this.apiKey, {
-      apiVersion: '2020-08-27',
-    })
+  // createCheckout(order: any) {
+  //   const requestData = `success_url=https://localhost:4200/&cancel_url=https://localhost:4200/#aboutme&mode=payment&line_items[0][price]=price_1KPSGJBd9ZzHiMEYBiheAw5I&line_items[0][quantity]=3&metadata[size]=L`
+  //   return this.http.post(this.baseURL + 'v1/checkout/sessions', requestData, {
+  //     headers: {
+  //       'Content-Type': 'application/x-www-form-urlencoded',
+  //       Authorization: `Bearer ${this.apiKey}`,
+  //     },
+  //   })
+  // }
 
-    const session = await stripe.checkout.sessions
-      .create({
-        line_items: [
-          {
-            price: '25.00',
-            quantity: 1,
-            description: 'L',
-          },
-        ],
-        mode: 'payment',
-        success_url: `https://localhost:4200/`,
-        cancel_url: `https://localhost:4200/#aboutus`,
-      })
-      .then((res) => {
-        return res
-      })
-  }
+  // createOrder(order: any) {
+  //   const requestData = `currency=usd&items[0][amount]=78&items[0][quantity]=3&metadata[size]=L`
+  //   return this.http.post(this.baseURL + 'v1/orders', requestData, {
+  //     headers: {
+  //       'Content-Type': 'application/x-www-form-urlencoded',
+  //       Authorization: `Bearer ${this.apiKey}`,
+  //     },
+  //   })
+  // }
 }

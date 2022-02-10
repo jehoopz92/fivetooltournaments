@@ -14,6 +14,8 @@ import { FooterComponent } from './components/footer/footer.component'
 import { ContactusComponent } from './components/contactus/contactus.component'
 import { TournamentsComponent } from './components/tournaments/tournaments.component'
 import { ApparelComponent } from './components/apparel/apparel.component'
+import { NgxStripeModule } from 'ngx-stripe'
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [

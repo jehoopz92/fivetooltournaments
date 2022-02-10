@@ -3,70 +3,82 @@
     <h1 class="mb-3">Tournaments</h1>
     <div class="row" *ngIf="products">
       <ng-container *ngFor="let product of products">
-      <div class="col-sm-6" *ngIf="product.metadata.DisplayOnWebsite === 'true'">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                *ngIf="product.images[0]"
-                src="{{ product.images[0] }}"
-                class="img-fluid rounded-start"
-                alt="Tounament Logo"
-              />
-              <img
-                *ngIf="!product.images[0]"
-                class="img-fluid rounded-start"
-                src="assets/5TT-02.webp"
-                alt="Our Logo"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title" *ngIf="product.name">
-                  <strong>{{ product.name }}</strong>
-                </h5>
-                <p class="card-text" *ngIf="product.description">{{ product.description }}</p>
-                <p class="card-text" *ngIf="product.metadata.Dates">
-                  <strong>When:</strong>
-                  {{ product.metadata.Dates }}
-                </p>
-                <p class="card-text" *ngIf="product.metadata.Fields">
-                  <strong>Where:</strong>
-                  {{ product.metadata.Fields }}
-                </p>
-                <p class="card-text" *ngIf="product.metadata.AgeGroup">
-                  <strong>Age Group:</strong>
-                  {{ product.metadata.AgeGroup }}
-                </p>
-                <p class="card-text" *ngIf="product.metadata.Price">
-                  <strong>Price:</strong>
-                  {{ product.metadata.Price }}
-                </p>
-                <p class="card-text">
-                  <strong>
-                    ** Teams must email a full roster to
-                    <a
-                      class="email"
-                      href="mailto:fivetooltournaments@gmail.com"
-                    >
-                      fivetooltournaments@gmail.com
-                    </a>
-                    **
-                  </strong>
-                </p>
-                <p class="card-text" *ngIf="product.metadata.URL">
-                  <button class="butn butn-primary-outline">
-                    <a href="{{ product.metadata.URL }}" target="_blank">
-                      Register Now
-                    </a>
-                  </button>
-                </p>
+        <div
+          class="col-sm-6"
+          *ngIf="product.metadata.DisplayOnWebsite === 'true'"
+        >
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  *ngIf="product.images[0]"
+                  src="{{ product.images[0] }}"
+                  class="img-fluid rounded-start"
+                  alt="Tounament Logo"
+                />
+                <img
+                  *ngIf="!product.images[0]"
+                  class="img-fluid rounded-start"
+                  src="assets/5TT-02.webp"
+                  alt="Our Logo"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" *ngIf="product.name">
+                    <strong>{{ product.name }}</strong>
+                  </h5>
+                  <p class="card-text" *ngIf="product.description">
+                    {{ product.description }}
+                  </p>
+                  <p class="card-text" *ngIf="product.metadata.Dates">
+                    <strong>When:</strong>
+                    {{ product.metadata.Dates }}
+                  </p>
+                  <p class="card-text" *ngIf="product.metadata.Fields">
+                    <strong>Where:</strong>
+                    {{ product.metadata.Fields }}
+                  </p>
+                  <p class="card-text" *ngIf="product.metadata.AgeGroup">
+                    <strong>Age Group:</strong>
+                    {{ product.metadata.AgeGroup }}
+                  </p>
+                  <p class="card-text" *ngIf="product.metadata.Price">
+                    <strong>Price:</strong>
+                    {{ product.metadata.Price }}
+                  </p>
+                  <p class="card-text">
+                    <strong>
+                      ** Teams must email a full roster to
+                      <a
+                        class="email"
+                        href="mailto:fivetooltournaments@gmail.com"
+                      >
+                        fivetooltournaments@gmail.com
+                      </a>
+
+                      Final payments are to be mailed to 13355 Hockley Drive,
+                      Fishers IN 46037 **
+                    </strong>
+                    <br />
+                    <strong class="primary-text">
+                      ** Final payments are to be mailed to 13355 Hockley Drive,
+                      Fishers IN 46037 **
+                    </strong>
+                  </p>
+                  <p class="card-text" *ngIf="product.metadata.URL">
+                    <button class="butn butn-primary-outline">
+                      <a href="{{ product.metadata.URL }}" target="_blank">
+                        Register Now
+                      </a>
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </ng-container>
+      </ng-container>
     </div>
   </div>
 </div>
