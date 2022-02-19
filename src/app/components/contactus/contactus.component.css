@@ -50,8 +50,7 @@ img {
 }
 
 .butn {
-  width: 30%;
-  margin-top: 1rem;
+  width: 10%;
 }
 
 @media only screen and (max-width: 900px) {
